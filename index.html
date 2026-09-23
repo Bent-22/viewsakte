@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0f">
+  <title>SONDERAKTE 07/24 — Fall Lena Palmer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <header class="topbar">
+    <div class="brand">
+      <span class="seal">BKA</span>
+      <div>
+        <strong>SONDERAKTE 07/24</strong>
+        <small>DIGITALES ERMITTLUNGSSYSTEM</small>
+      </div>
+    </div>
+    <div class="status">
+      <span class="dot"></span> SYSTEM ONLINE
+    </div>
+  </header>
+
+  <main>
+    <section id="start" class="screen active">
+      <div class="hero">
+        <div class="classification">VERTRAULICH · UNTERRICHTSSIMULATION</div>
+        <h1>FALL<br><span>LENA PALMER</span></h1>
+        <p class="lead">Ein Mädchen verschwindet. Drei Tage später taucht ein verstörendes Video auf. Das Land reagiert. Deine Aufgabe: Rekonstruiere den Fall.</p>
+        <div class="warning">
+          <strong>INHALTSHINWEIS</strong>
+          <p>Der Roman und diese Simulation thematisieren sexualisierte Gewalt, Radikalisierung und politische Gewalt. Die Website beschreibt den Ausgangsfall sachlich und zeigt keine entsprechenden Bilder.</p>
+        </div>
+        <div class="mission">
+          <div><span>AUFTRAG</span><b>01</b></div>
+          <p>Arbeite dich Hinweis für Hinweis durch die Akte. Trenne Beobachtungen von Behauptungen und entwickle nach jeder neuen Information eine eigene Hypothese.</p>
+        </div>
+        <button class="primary" onclick="startCase()">ERMITTLUNG STARTEN <span>→</span></button>
+        <p class="tiny">Fiktive Unterrichtssimulation auf Grundlage von Marc-Uwe Klings Roman <em>Views</em>. Nicht mit dem BKA verbunden.</p>
+      </div>
+    </section>
+
+    <section id="case" class="screen">
+      <div class="case-layout">
+        <aside class="sidebar">
+          <div class="file-head">AKTENSTATUS</div>
+          <div id="progressText">0 / 9 HINWEISE</div>
+          <div class="progress"><i id="progressBar"></i></div>
+          <nav id="caseNav"></nav>
+          <button class="reset" onclick="resetCase()">↻ Fall zurücksetzen</button>
+        </aside>
+        <div class="content">
+          <div id="stage"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
